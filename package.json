@@ -1,9 +1,10 @@
 {
-  "name": "react-hot-boilerplate",
+  "name": "react-front-back-stack-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "description": "Boilerplate for ReactJS project with hot code reloading, production configuration and express server for backend.",
   "scripts": {
-    "start": "node server.js",
+    "dev": "node server_dev.js",
+    "build": "rimraf dist && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors",
     "lint": "eslint src"
   },
   "repository": {
@@ -37,11 +38,16 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.6.2",
     "react-hot-loader": "^1.3.0",
+    "rimraf": "^2.5.4",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "axios": "^0.13.1",
+    "classnames": "^2.2.5",
+    "history": "^1.17.0",
     "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react-dom": "^0.14.6",
+    "react-router": "^2.6.1"
   }
 }
